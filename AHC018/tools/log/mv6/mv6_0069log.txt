@@ -1,0 +1,92 @@
+    Finished release [optimized] target(s) in 0.03s
+     Running `target/release/tester ../mv6.out`
+water_step
+now_pos.y = 124, now_pos.x = 36
+dest_pos.y = 166, dest_pos.x = 114
+house.at(dest_house_index).y = 170, house.at(dest_house_index).x = 41
+debug_dist = 51, from_cand_idx = 9
+house.at(from_cand_idx).y = 124, house.at(from_cand_idx).x = 36
+
+not_water_step
+now_pos.y = 124, now_pos.x = 36
+dest_pos.y = 170, dest_pos.x = 41
+house.at(dest_house_index).y = 88, house.at(dest_house_index).x = 21
+debug_dist = 51, from_cand_idx = 9
+house.at(from_cand_idx).y = 124, house.at(from_cand_idx).x = 36
+
+not_water_step
+now_pos.y = 124, now_pos.x = 36
+dest_pos.y = 88, dest_pos.x = 21
+house.at(dest_house_index).y = 60, house.at(dest_house_index).x = 47
+debug_dist = 54, from_cand_idx = 7
+house.at(from_cand_idx).y = 88, house.at(from_cand_idx).x = 21
+
+not_water_step
+now_pos.y = 88, now_pos.x = 21
+dest_pos.y = 60, dest_pos.x = 47
+house.at(dest_house_index).y = 68, house.at(dest_house_index).x = 112
+debug_dist = 49, from_cand_idx = 3
+house.at(from_cand_idx).y = 78, house.at(from_cand_idx).x = 151
+house.at(dest_house_index).y = 68, house.at(dest_house_index).x = 112
+debug_dist = 49, from_cand_idx = 3
+house.at(from_cand_idx).y = 78, house.at(from_cand_idx).x = 151
+house.at(dest_house_index).y = 68, house.at(dest_house_index).x = 112
+debug_dist = 68, from_cand_idx = 8
+house.at(from_cand_idx).y = 29, house.at(from_cand_idx).x = 141
+house.at(dest_house_index).y = 68, house.at(dest_house_index).x = 112
+debug_dist = 68, from_cand_idx = 8
+house.at(from_cand_idx).y = 29, house.at(from_cand_idx).x = 141
+house.at(dest_house_index).y = 68, house.at(dest_house_index).x = 112
+debug_dist = 73, from_cand_idx = 6
+house.at(from_cand_idx).y = 60, house.at(from_cand_idx).x = 47
+
+not_water_step
+now_pos.y = 60, now_pos.x = 47
+dest_pos.y = 68, dest_pos.x = 112
+house.at(dest_house_index).y = 78, house.at(dest_house_index).x = 151
+debug_dist = 49, from_cand_idx = 2
+house.at(from_cand_idx).y = 68, house.at(from_cand_idx).x = 112
+
+not_water_step
+now_pos.y = 68, now_pos.x = 112
+dest_pos.y = 78, dest_pos.x = 151
+house.at(dest_house_index).y = 29, house.at(dest_house_index).x = 141
+debug_dist = 37, from_cand_idx = 4
+house.at(from_cand_idx).y = 29, house.at(from_cand_idx).x = 178
+house.at(dest_house_index).y = 29, house.at(dest_house_index).x = 141
+debug_dist = 37, from_cand_idx = 4
+house.at(from_cand_idx).y = 29, house.at(from_cand_idx).x = 178
+house.at(dest_house_index).y = 29, house.at(dest_house_index).x = 141
+debug_dist = 59, from_cand_idx = 3
+house.at(from_cand_idx).y = 78, house.at(from_cand_idx).x = 151
+
+not_water_step
+now_pos.y = 78, now_pos.x = 151
+dest_pos.y = 29, dest_pos.x = 141
+house.at(dest_house_index).y = 29, house.at(dest_house_index).x = 178
+debug_dist = 37, from_cand_idx = 8
+house.at(from_cand_idx).y = 29, house.at(from_cand_idx).x = 141
+
+not_water_step
+now_pos.y = 29, now_pos.x = 141
+dest_pos.y = 29, dest_pos.x = 178
+house.at(dest_house_index).y = 110, house.at(dest_house_index).x = 191
+debug_dist = 70, from_cand_idx = 1
+house.at(from_cand_idx).y = 168, house.at(from_cand_idx).x = 179
+house.at(dest_house_index).y = 110, house.at(dest_house_index).x = 191
+debug_dist = 70, from_cand_idx = 1
+house.at(from_cand_idx).y = 168, house.at(from_cand_idx).x = 179
+house.at(dest_house_index).y = 110, house.at(dest_house_index).x = 191
+debug_dist = 72, from_cand_idx = 3
+house.at(from_cand_idx).y = 78, house.at(from_cand_idx).x = 151
+
+not_water_step
+now_pos.y = 78, now_pos.x = 151
+dest_pos.y = 110, dest_pos.x = 191
+house.at(dest_house_index).y = 168, house.at(dest_house_index).x = 179
+debug_dist = 35, from_cand_idx = -1
+
+water_step
+now_pos.y = 168, now_pos.x = 179
+dest_pos.y = 169, dest_pos.x = 145
+Total Cost = 332000

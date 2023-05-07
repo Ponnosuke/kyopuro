@@ -1,0 +1,87 @@
+{
+	// Place your snippets for cpp here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+
+	"AtCoder":{
+		"prefix" : "atcodertemplate",
+		"body" : [
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"",
+			"using i64 = int64_t;",
+			"using ui64 = uint64_t;",
+			"",
+			"#ifdef LOCAL_DEBUG",
+			"\t#define debug(X) std::cerr << X << \" \"",
+			"\t#define debugV(X) std::cerr << #X << \" = \" << X << \", \"",
+			"\t#define debugVL(Y) std::cerr << #Y << \" = \" << Y << '\\n'",
+			"\t#define debugWL(Z) std::cerr << #Z << '\\n'",
+			"\t#define debugP() std::cerr << \"Line:\" << __LINE__ << '\\n'",
+			"#else",
+			"\t#define debug(X)",
+			"\t#define debugV(X)",
+			"\t#define debugVL(Y)",
+			"\t#define debugWL(Z)",
+			"\t#define debugP()",
+			"#endif",
+			"",
+			"int main() {$1",
+			"}",
+		]
+	},
+
+	"Timer Class":{
+		"prefix" : "timerclass",
+		"body" : [
+			"class Timer{",
+				"\tprivate:",
+					"\t\tstd::chrono::system_clock::time_point m_start;",
+				"\tpublic:",
+					"\t\tTimer() :m_start(std::chrono::system_clock::now()) {",
+						"\t\t\tstd::cerr << fixed << setprecision(18);",
+					"\t\t}",
+				"\tpublic:",
+					"\t\tvoid Reset(){",
+						"\t\t\tm_start = std::chrono::system_clock::now();",
+					"\t\t}",
+					"\t\tdouble GetTimeMS(){",
+						"\t\t\tauto end = std::chrono::system_clock::now();",
+						"\t\t\treturn (double)std::chrono::duration_cast<std::chrono::milliseconds>(end - m_start).count();",
+					"\t\t}",
+					"\t\tdouble GetTimeSec(){",
+						"\t\t\tauto end = std::chrono::system_clock::now();",
+						"\t\t\treturn (double)std::chrono::duration_cast<std::chrono::seconds>(end - m_start).count();",
+					"\t\t}",
+			"};",
+		]
+	},
+
+	"random function":{
+		"prefix": "randomGenerator",
+		"body": [
+			"// i64乱数ジェネレーター",
+			"// [L, R] を満たす int64_t 型のランダムな整数を返す",
+			"// ただし、 mt19937_64 は uint64_t 型を返していることに注意",
+			"i64 myRnd64(i64 L, i64 R){",
+				"\trandom_device seedGen;",
+				"\tmt19937_64 rd(seedGen());",
+				"",
+				"\ti64 ret = L + (rd() % (R - L + 1));",
+				"",
+				"return ret;",
+			"}",
+		]
+	},
+}

@@ -1,0 +1,12 @@
+    Finished release [optimized] target(s) in 0.03s
+     Running `target/release/tester ../Psyho.out`
+[DATA] N = 200
+[DATA] W = 2
+[DATA] K = 9
+[DATA] C = 32
+CLEV=5
+VW={(19,172), (187,194)}
+VH={(62,77), (146,38), (124,183), (60,115), (59,152), (157,84), (119,10), (29,122), (76,173)}
+r=157, c=83, v=2253
+[DATA] time = 346.858
+Total Cost = 240533

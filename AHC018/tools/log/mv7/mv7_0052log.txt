@@ -1,0 +1,3 @@
+    Finished release [optimized] target(s) in 0.03s
+     Running `target/release/tester ../mv7.out`
+Total Cost = 173566

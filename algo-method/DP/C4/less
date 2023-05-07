@@ -1,0 +1,1081 @@
+bitTest.cpp: In function ‘int main()’:
+bitTest.cpp:22:16: error: no match for ‘operator&’ (operand types are ‘std::basic_ostream<char>’ and ‘int’)
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                 |
+      |                                                 std::basic_ostream<char>
+   11 |     #define debugWL(Z) std::cerr << #Z << '\n'
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   12 |     #define debugP() std::cerr << "Line:" << __LINE__ << '\n'
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   13 | #else
+      | ~~~~~           
+   14 |     #define debug(X)
+      |     ~~~~~~~~~~~~~~~~
+   15 |     #define debugV(X)
+      |     ~~~~~~~~~~~~~~~~~
+   16 |     #define debugVL(Y)
+      |     ~~~~~~~~~~~~~~~~~~
+   17 |     #define debugWL(Z)
+      |     ~~~~~~~~~~~~~~~~~~
+   18 |     #define debugP()
+      |     ~~~~~~~~~~~~~~~~
+   19 | #endif
+      | ~~~~~~          
+   20 | 
+      |                 
+   21 | int main() {
+      | ~~~~~~~~~~~~    
+   22 |     debugVL(22 & (1 << 0));
+      |     ~~~~~~~~~~ ^
+bitTest.cpp:10:52: note: in definition of macro ‘debugVL’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                    ^
+bitTest.cpp:22:16: note: candidate: ‘operator&(int, int)’ <built-in>
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+   22 |     debugVL(22 & (1 << 0));
+bitTest.cpp:10:52: note: in definition of macro ‘debugVL’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                    ^
+bitTest.cpp:22:16: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘int’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+   22 |     debugVL(22 & (1 << 0));
+bitTest.cpp:10:52: note: in definition of macro ‘debugVL’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                    ^
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:45,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/cstddef:165:3: note: candidate: ‘constexpr std::byte std::operator&(std::byte, std::byte)’
+  165 |   operator&(byte __l, byte __r) noexcept
+      |   ^~~~~~~~
+/usr/include/c++/9/cstddef:165:18: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::byte’
+  165 |   operator&(byte __l, byte __r) noexcept
+      |             ~~~~~^~~
+In file included from /usr/include/c++/9/ios:42,
+                 from /usr/include/c++/9/istream:38,
+                 from /usr/include/c++/9/sstream:38,
+                 from /usr/include/c++/9/complex:45,
+                 from /usr/include/c++/9/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:54,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/ios_base.h:83:3: note: candidate: ‘constexpr std::_Ios_Fmtflags std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)’
+   83 |   operator&(_Ios_Fmtflags __a, _Ios_Fmtflags __b)
+      |   ^~~~~~~~
+/usr/include/c++/9/bits/ios_base.h:83:27: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Fmtflags’
+   83 |   operator&(_Ios_Fmtflags __a, _Ios_Fmtflags __b)
+      |             ~~~~~~~~~~~~~~^~~
+/usr/include/c++/9/bits/ios_base.h:125:3: note: candidate: ‘constexpr std::_Ios_Openmode std::operator&(std::_Ios_Openmode, std::_Ios_Openmode)’
+  125 |   operator&(_Ios_Openmode __a, _Ios_Openmode __b)
+      |   ^~~~~~~~
+/usr/include/c++/9/bits/ios_base.h:125:27: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Openmode’
+  125 |   operator&(_Ios_Openmode __a, _Ios_Openmode __b)
+      |             ~~~~~~~~~~~~~~^~~
+/usr/include/c++/9/bits/ios_base.h:165:3: note: candidate: ‘constexpr std::_Ios_Iostate std::operator&(std::_Ios_Iostate, std::_Ios_Iostate)’
+  165 |   operator&(_Ios_Iostate __a, _Ios_Iostate __b)
+      |   ^~~~~~~~
+/usr/include/c++/9/bits/ios_base.h:165:26: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Iostate’
+  165 |   operator&(_Ios_Iostate __a, _Ios_Iostate __b)
+      |             ~~~~~~~~~~~~~^~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:66,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bitset:1433:5: note: candidate: ‘template<long unsigned int _Nb> std::bitset<_Nb> std::operator&(const std::bitset<_Nb>&, const std::bitset<_Nb>&)’
+ 1433 |     operator&(const bitset<_Nb>& __x, const bitset<_Nb>& __y) _GLIBCXX_NOEXCEPT
+      |     ^~~~~~~~
+/usr/include/c++/9/bitset:1433:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::bitset<_Nb>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:22:5: note: in expansion of macro ‘debugVL’
+   22 |     debugVL(22 & (1 << 0));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/bits/shared_ptr_atomic.h:33,
+                 from /usr/include/c++/9/memory:82,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:82,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/atomic_base.h:99:3: note: candidate: ‘constexpr std::memory_order std::operator&(std::memory_order, std::__memory_order_modifier)’
+   99 |   operator&(memory_order __m, __memory_order_modifier __mod)
+      |   ^~~~~~~~
+/usr/include/c++/9/bits/atomic_base.h:99:26: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::memory_order’
+   99 |   operator&(memory_order __m, __memory_order_modifier __mod)
+      |             ~~~~~~~~~~~~~^~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom1, class _Dom2> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Expr, std::_Expr, _Dom1, _Dom2>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::_Expr<_Dom2, typename _Dom2::value_type>&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:22:5: note: in expansion of macro ‘debugVL’
+   22 |     debugVL(22 & (1 << 0));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Expr, std::_Constant, _Dom, typename _Dom::value_type>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const typename _Dom::value_type&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:22:5: note: in expansion of macro ‘debugVL’
+   22 |     debugVL(22 & (1 << 0));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Constant, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const typename _Dom::value_type&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   mismatched types ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’ and ‘int’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:22:5: note: in expansion of macro ‘debugVL’
+   22 |     debugVL(22 & (1 << 0));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Expr, std::_ValArray, _Dom, typename _Dom::value_type>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::valarray<typename _Dom::value_type>&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:22:5: note: in expansion of macro ‘debugVL’
+   22 |     debugVL(22 & (1 << 0));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_ValArray, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const std::valarray<typename _Dom::value_type>&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   mismatched types ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’ and ‘int’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:22:5: note: in expansion of macro ‘debugVL’
+   22 |     debugVL(22 & (1 << 0));
+      |     ^~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/valarray:1191:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_ValArray, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__bitwise_and, _Tp>::result_type> std::operator&(const std::valarray<_Tp>&, const std::valarray<_Tp>&)’
+ 1191 | _DEFINE_BINARY_OPERATOR(&, __bitwise_and)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/valarray:1191:1: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::valarray<_Tp>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:22:5: note: in expansion of macro ‘debugVL’
+   22 |     debugVL(22 & (1 << 0));
+      |     ^~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/valarray:1191:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_ValArray, std::_Constant, _Tp, _Tp>, typename std::__fun<std::__bitwise_and, _Tp>::result_type> std::operator&(const std::valarray<_Tp>&, const typename std::valarray<_Tp>::value_type&)’
+ 1191 | _DEFINE_BINARY_OPERATOR(&, __bitwise_and)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/valarray:1191:1: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::valarray<_Tp>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:22:5: note: in expansion of macro ‘debugVL’
+   22 |     debugVL(22 & (1 << 0));
+      |     ^~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/valarray:1191:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Constant, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__bitwise_and, _Tp>::result_type> std::operator&(const typename std::valarray<_Tp>::value_type&, const std::valarray<_Tp>&)’
+ 1191 | _DEFINE_BINARY_OPERATOR(&, __bitwise_and)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/valarray:1191:1: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   mismatched types ‘const std::valarray<_Tp>’ and ‘int’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:22:5: note: in expansion of macro ‘debugVL’
+   22 |     debugVL(22 & (1 << 0));
+      |     ^~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:105,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/future:143:20: note: candidate: ‘constexpr std::launch std::operator&(std::launch, std::launch)’
+  143 |   constexpr launch operator&(launch __x, launch __y)
+      |                    ^~~~~~~~
+/usr/include/c++/9/future:143:37: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::launch’
+  143 |   constexpr launch operator&(launch __x, launch __y)
+      |                              ~~~~~~~^~~
+bitTest.cpp:23:16: error: no match for ‘operator&’ (operand types are ‘std::basic_ostream<char>’ and ‘int’)
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                 |
+      |                                                 std::basic_ostream<char>
+   11 |     #define debugWL(Z) std::cerr << #Z << '\n'
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   12 |     #define debugP() std::cerr << "Line:" << __LINE__ << '\n'
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   13 | #else
+      | ~~~~~           
+   14 |     #define debug(X)
+      |     ~~~~~~~~~~~~~~~~
+   15 |     #define debugV(X)
+      |     ~~~~~~~~~~~~~~~~~
+   16 |     #define debugVL(Y)
+      |     ~~~~~~~~~~~~~~~~~~
+   17 |     #define debugWL(Z)
+      |     ~~~~~~~~~~~~~~~~~~
+   18 |     #define debugP()
+      |     ~~~~~~~~~~~~~~~~
+   19 | #endif
+      | ~~~~~~          
+   20 | 
+      |                 
+   21 | int main() {
+      | ~~~~~~~~~~~~    
+   22 |     debugVL(22 & (1 << 0));
+      |     ~~~~~~~~~~~~~~~~~~~~~~~
+   23 |     debugVL(22 & (1 << 1));
+      |     ~~~~~~~~~~ ^
+bitTest.cpp:10:52: note: in definition of macro ‘debugVL’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                    ^
+bitTest.cpp:23:16: note: candidate: ‘operator&(int, int)’ <built-in>
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+   23 |     debugVL(22 & (1 << 1));
+bitTest.cpp:10:52: note: in definition of macro ‘debugVL’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                    ^
+bitTest.cpp:23:16: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘int’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+   23 |     debugVL(22 & (1 << 1));
+bitTest.cpp:10:52: note: in definition of macro ‘debugVL’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                    ^
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:45,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/cstddef:165:3: note: candidate: ‘constexpr std::byte std::operator&(std::byte, std::byte)’
+  165 |   operator&(byte __l, byte __r) noexcept
+      |   ^~~~~~~~
+/usr/include/c++/9/cstddef:165:18: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::byte’
+  165 |   operator&(byte __l, byte __r) noexcept
+      |             ~~~~~^~~
+In file included from /usr/include/c++/9/ios:42,
+                 from /usr/include/c++/9/istream:38,
+                 from /usr/include/c++/9/sstream:38,
+                 from /usr/include/c++/9/complex:45,
+                 from /usr/include/c++/9/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:54,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/ios_base.h:83:3: note: candidate: ‘constexpr std::_Ios_Fmtflags std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)’
+   83 |   operator&(_Ios_Fmtflags __a, _Ios_Fmtflags __b)
+      |   ^~~~~~~~
+/usr/include/c++/9/bits/ios_base.h:83:27: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Fmtflags’
+   83 |   operator&(_Ios_Fmtflags __a, _Ios_Fmtflags __b)
+      |             ~~~~~~~~~~~~~~^~~
+/usr/include/c++/9/bits/ios_base.h:125:3: note: candidate: ‘constexpr std::_Ios_Openmode std::operator&(std::_Ios_Openmode, std::_Ios_Openmode)’
+  125 |   operator&(_Ios_Openmode __a, _Ios_Openmode __b)
+      |   ^~~~~~~~
+/usr/include/c++/9/bits/ios_base.h:125:27: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Openmode’
+  125 |   operator&(_Ios_Openmode __a, _Ios_Openmode __b)
+      |             ~~~~~~~~~~~~~~^~~
+/usr/include/c++/9/bits/ios_base.h:165:3: note: candidate: ‘constexpr std::_Ios_Iostate std::operator&(std::_Ios_Iostate, std::_Ios_Iostate)’
+  165 |   operator&(_Ios_Iostate __a, _Ios_Iostate __b)
+      |   ^~~~~~~~
+/usr/include/c++/9/bits/ios_base.h:165:26: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Iostate’
+  165 |   operator&(_Ios_Iostate __a, _Ios_Iostate __b)
+      |             ~~~~~~~~~~~~~^~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:66,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bitset:1433:5: note: candidate: ‘template<long unsigned int _Nb> std::bitset<_Nb> std::operator&(const std::bitset<_Nb>&, const std::bitset<_Nb>&)’
+ 1433 |     operator&(const bitset<_Nb>& __x, const bitset<_Nb>& __y) _GLIBCXX_NOEXCEPT
+      |     ^~~~~~~~
+/usr/include/c++/9/bitset:1433:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::bitset<_Nb>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:23:5: note: in expansion of macro ‘debugVL’
+   23 |     debugVL(22 & (1 << 1));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/bits/shared_ptr_atomic.h:33,
+                 from /usr/include/c++/9/memory:82,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:82,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/atomic_base.h:99:3: note: candidate: ‘constexpr std::memory_order std::operator&(std::memory_order, std::__memory_order_modifier)’
+   99 |   operator&(memory_order __m, __memory_order_modifier __mod)
+      |   ^~~~~~~~
+/usr/include/c++/9/bits/atomic_base.h:99:26: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::memory_order’
+   99 |   operator&(memory_order __m, __memory_order_modifier __mod)
+      |             ~~~~~~~~~~~~~^~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom1, class _Dom2> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Expr, std::_Expr, _Dom1, _Dom2>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::_Expr<_Dom2, typename _Dom2::value_type>&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:23:5: note: in expansion of macro ‘debugVL’
+   23 |     debugVL(22 & (1 << 1));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Expr, std::_Constant, _Dom, typename _Dom::value_type>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const typename _Dom::value_type&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:23:5: note: in expansion of macro ‘debugVL’
+   23 |     debugVL(22 & (1 << 1));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Constant, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const typename _Dom::value_type&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   mismatched types ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’ and ‘int’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:23:5: note: in expansion of macro ‘debugVL’
+   23 |     debugVL(22 & (1 << 1));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Expr, std::_ValArray, _Dom, typename _Dom::value_type>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::valarray<typename _Dom::value_type>&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:23:5: note: in expansion of macro ‘debugVL’
+   23 |     debugVL(22 & (1 << 1));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_ValArray, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const std::valarray<typename _Dom::value_type>&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   mismatched types ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’ and ‘int’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:23:5: note: in expansion of macro ‘debugVL’
+   23 |     debugVL(22 & (1 << 1));
+      |     ^~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/valarray:1191:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_ValArray, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__bitwise_and, _Tp>::result_type> std::operator&(const std::valarray<_Tp>&, const std::valarray<_Tp>&)’
+ 1191 | _DEFINE_BINARY_OPERATOR(&, __bitwise_and)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/valarray:1191:1: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::valarray<_Tp>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:23:5: note: in expansion of macro ‘debugVL’
+   23 |     debugVL(22 & (1 << 1));
+      |     ^~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/valarray:1191:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_ValArray, std::_Constant, _Tp, _Tp>, typename std::__fun<std::__bitwise_and, _Tp>::result_type> std::operator&(const std::valarray<_Tp>&, const typename std::valarray<_Tp>::value_type&)’
+ 1191 | _DEFINE_BINARY_OPERATOR(&, __bitwise_and)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/valarray:1191:1: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::valarray<_Tp>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:23:5: note: in expansion of macro ‘debugVL’
+   23 |     debugVL(22 & (1 << 1));
+      |     ^~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/valarray:1191:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Constant, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__bitwise_and, _Tp>::result_type> std::operator&(const typename std::valarray<_Tp>::value_type&, const std::valarray<_Tp>&)’
+ 1191 | _DEFINE_BINARY_OPERATOR(&, __bitwise_and)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/valarray:1191:1: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   mismatched types ‘const std::valarray<_Tp>’ and ‘int’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:23:5: note: in expansion of macro ‘debugVL’
+   23 |     debugVL(22 & (1 << 1));
+      |     ^~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:105,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/future:143:20: note: candidate: ‘constexpr std::launch std::operator&(std::launch, std::launch)’
+  143 |   constexpr launch operator&(launch __x, launch __y)
+      |                    ^~~~~~~~
+/usr/include/c++/9/future:143:37: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::launch’
+  143 |   constexpr launch operator&(launch __x, launch __y)
+      |                              ~~~~~~~^~~
+bitTest.cpp:24:16: error: no match for ‘operator&’ (operand types are ‘std::basic_ostream<char>’ and ‘int’)
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                 |
+      |                                                 std::basic_ostream<char>
+   11 |     #define debugWL(Z) std::cerr << #Z << '\n'
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   12 |     #define debugP() std::cerr << "Line:" << __LINE__ << '\n'
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   13 | #else
+      | ~~~~~           
+   14 |     #define debug(X)
+      |     ~~~~~~~~~~~~~~~~
+   15 |     #define debugV(X)
+      |     ~~~~~~~~~~~~~~~~~
+   16 |     #define debugVL(Y)
+      |     ~~~~~~~~~~~~~~~~~~
+   17 |     #define debugWL(Z)
+      |     ~~~~~~~~~~~~~~~~~~
+   18 |     #define debugP()
+      |     ~~~~~~~~~~~~~~~~
+   19 | #endif
+      | ~~~~~~          
+   20 | 
+      |                 
+   21 | int main() {
+      | ~~~~~~~~~~~~    
+   22 |     debugVL(22 & (1 << 0));
+      |     ~~~~~~~~~~~~~~~~~~~~~~~
+   23 |     debugVL(22 & (1 << 1));
+      |     ~~~~~~~~~~~~~~~~~~~~~~~
+   24 |     debugVL(22 & (1 << 2));
+      |     ~~~~~~~~~~ ^
+bitTest.cpp:10:52: note: in definition of macro ‘debugVL’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                    ^
+bitTest.cpp:24:16: note: candidate: ‘operator&(int, int)’ <built-in>
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+   24 |     debugVL(22 & (1 << 2));
+bitTest.cpp:10:52: note: in definition of macro ‘debugVL’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                    ^
+bitTest.cpp:24:16: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘int’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+   24 |     debugVL(22 & (1 << 2));
+bitTest.cpp:10:52: note: in definition of macro ‘debugVL’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                    ^
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:45,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/cstddef:165:3: note: candidate: ‘constexpr std::byte std::operator&(std::byte, std::byte)’
+  165 |   operator&(byte __l, byte __r) noexcept
+      |   ^~~~~~~~
+/usr/include/c++/9/cstddef:165:18: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::byte’
+  165 |   operator&(byte __l, byte __r) noexcept
+      |             ~~~~~^~~
+In file included from /usr/include/c++/9/ios:42,
+                 from /usr/include/c++/9/istream:38,
+                 from /usr/include/c++/9/sstream:38,
+                 from /usr/include/c++/9/complex:45,
+                 from /usr/include/c++/9/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:54,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/ios_base.h:83:3: note: candidate: ‘constexpr std::_Ios_Fmtflags std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)’
+   83 |   operator&(_Ios_Fmtflags __a, _Ios_Fmtflags __b)
+      |   ^~~~~~~~
+/usr/include/c++/9/bits/ios_base.h:83:27: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Fmtflags’
+   83 |   operator&(_Ios_Fmtflags __a, _Ios_Fmtflags __b)
+      |             ~~~~~~~~~~~~~~^~~
+/usr/include/c++/9/bits/ios_base.h:125:3: note: candidate: ‘constexpr std::_Ios_Openmode std::operator&(std::_Ios_Openmode, std::_Ios_Openmode)’
+  125 |   operator&(_Ios_Openmode __a, _Ios_Openmode __b)
+      |   ^~~~~~~~
+/usr/include/c++/9/bits/ios_base.h:125:27: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Openmode’
+  125 |   operator&(_Ios_Openmode __a, _Ios_Openmode __b)
+      |             ~~~~~~~~~~~~~~^~~
+/usr/include/c++/9/bits/ios_base.h:165:3: note: candidate: ‘constexpr std::_Ios_Iostate std::operator&(std::_Ios_Iostate, std::_Ios_Iostate)’
+  165 |   operator&(_Ios_Iostate __a, _Ios_Iostate __b)
+      |   ^~~~~~~~
+/usr/include/c++/9/bits/ios_base.h:165:26: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Iostate’
+  165 |   operator&(_Ios_Iostate __a, _Ios_Iostate __b)
+      |             ~~~~~~~~~~~~~^~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:66,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bitset:1433:5: note: candidate: ‘template<long unsigned int _Nb> std::bitset<_Nb> std::operator&(const std::bitset<_Nb>&, const std::bitset<_Nb>&)’
+ 1433 |     operator&(const bitset<_Nb>& __x, const bitset<_Nb>& __y) _GLIBCXX_NOEXCEPT
+      |     ^~~~~~~~
+/usr/include/c++/9/bitset:1433:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::bitset<_Nb>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:24:5: note: in expansion of macro ‘debugVL’
+   24 |     debugVL(22 & (1 << 2));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/bits/shared_ptr_atomic.h:33,
+                 from /usr/include/c++/9/memory:82,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:82,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/atomic_base.h:99:3: note: candidate: ‘constexpr std::memory_order std::operator&(std::memory_order, std::__memory_order_modifier)’
+   99 |   operator&(memory_order __m, __memory_order_modifier __mod)
+      |   ^~~~~~~~
+/usr/include/c++/9/bits/atomic_base.h:99:26: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::memory_order’
+   99 |   operator&(memory_order __m, __memory_order_modifier __mod)
+      |             ~~~~~~~~~~~~~^~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom1, class _Dom2> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Expr, std::_Expr, _Dom1, _Dom2>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::_Expr<_Dom2, typename _Dom2::value_type>&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:24:5: note: in expansion of macro ‘debugVL’
+   24 |     debugVL(22 & (1 << 2));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Expr, std::_Constant, _Dom, typename _Dom::value_type>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const typename _Dom::value_type&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:24:5: note: in expansion of macro ‘debugVL’
+   24 |     debugVL(22 & (1 << 2));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Constant, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const typename _Dom::value_type&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   mismatched types ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’ and ‘int’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:24:5: note: in expansion of macro ‘debugVL’
+   24 |     debugVL(22 & (1 << 2));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Expr, std::_ValArray, _Dom, typename _Dom::value_type>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::valarray<typename _Dom::value_type>&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:24:5: note: in expansion of macro ‘debugVL’
+   24 |     debugVL(22 & (1 << 2));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_ValArray, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const std::valarray<typename _Dom::value_type>&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   mismatched types ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’ and ‘int’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:24:5: note: in expansion of macro ‘debugVL’
+   24 |     debugVL(22 & (1 << 2));
+      |     ^~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/valarray:1191:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_ValArray, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__bitwise_and, _Tp>::result_type> std::operator&(const std::valarray<_Tp>&, const std::valarray<_Tp>&)’
+ 1191 | _DEFINE_BINARY_OPERATOR(&, __bitwise_and)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/valarray:1191:1: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::valarray<_Tp>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:24:5: note: in expansion of macro ‘debugVL’
+   24 |     debugVL(22 & (1 << 2));
+      |     ^~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/valarray:1191:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_ValArray, std::_Constant, _Tp, _Tp>, typename std::__fun<std::__bitwise_and, _Tp>::result_type> std::operator&(const std::valarray<_Tp>&, const typename std::valarray<_Tp>::value_type&)’
+ 1191 | _DEFINE_BINARY_OPERATOR(&, __bitwise_and)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/valarray:1191:1: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::valarray<_Tp>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:24:5: note: in expansion of macro ‘debugVL’
+   24 |     debugVL(22 & (1 << 2));
+      |     ^~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/valarray:1191:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Constant, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__bitwise_and, _Tp>::result_type> std::operator&(const typename std::valarray<_Tp>::value_type&, const std::valarray<_Tp>&)’
+ 1191 | _DEFINE_BINARY_OPERATOR(&, __bitwise_and)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/valarray:1191:1: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   mismatched types ‘const std::valarray<_Tp>’ and ‘int’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:24:5: note: in expansion of macro ‘debugVL’
+   24 |     debugVL(22 & (1 << 2));
+      |     ^~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:105,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/future:143:20: note: candidate: ‘constexpr std::launch std::operator&(std::launch, std::launch)’
+  143 |   constexpr launch operator&(launch __x, launch __y)
+      |                    ^~~~~~~~
+/usr/include/c++/9/future:143:37: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::launch’
+  143 |   constexpr launch operator&(launch __x, launch __y)
+      |                              ~~~~~~~^~~
+bitTest.cpp:25:16: error: no match for ‘operator&’ (operand types are ‘std::basic_ostream<char>’ and ‘int’)
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                 |
+      |                                                 std::basic_ostream<char>
+   11 |     #define debugWL(Z) std::cerr << #Z << '\n'
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   12 |     #define debugP() std::cerr << "Line:" << __LINE__ << '\n'
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   13 | #else
+      | ~~~~~           
+   14 |     #define debug(X)
+      |     ~~~~~~~~~~~~~~~~
+   15 |     #define debugV(X)
+      |     ~~~~~~~~~~~~~~~~~
+   16 |     #define debugVL(Y)
+      |     ~~~~~~~~~~~~~~~~~~
+   17 |     #define debugWL(Z)
+      |     ~~~~~~~~~~~~~~~~~~
+   18 |     #define debugP()
+      |     ~~~~~~~~~~~~~~~~
+   19 | #endif
+      | ~~~~~~          
+   20 | 
+      |                 
+   21 | int main() {
+      | ~~~~~~~~~~~~    
+   22 |     debugVL(22 & (1 << 0));
+      |     ~~~~~~~~~~~~~~~~~~~~~~~
+   23 |     debugVL(22 & (1 << 1));
+      |     ~~~~~~~~~~~~~~~~~~~~~~~
+   24 |     debugVL(22 & (1 << 2));
+      |     ~~~~~~~~~~~~~~~~~~~~~~~
+   25 |     debugVL(22 & (1 << 3));
+      |     ~~~~~~~~~~ ^
+bitTest.cpp:10:52: note: in definition of macro ‘debugVL’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                    ^
+bitTest.cpp:25:16: note: candidate: ‘operator&(int, int)’ <built-in>
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+   25 |     debugVL(22 & (1 << 3));
+bitTest.cpp:10:52: note: in definition of macro ‘debugVL’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                    ^
+bitTest.cpp:25:16: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘int’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+   25 |     debugVL(22 & (1 << 3));
+bitTest.cpp:10:52: note: in definition of macro ‘debugVL’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                    ^
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:45,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/cstddef:165:3: note: candidate: ‘constexpr std::byte std::operator&(std::byte, std::byte)’
+  165 |   operator&(byte __l, byte __r) noexcept
+      |   ^~~~~~~~
+/usr/include/c++/9/cstddef:165:18: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::byte’
+  165 |   operator&(byte __l, byte __r) noexcept
+      |             ~~~~~^~~
+In file included from /usr/include/c++/9/ios:42,
+                 from /usr/include/c++/9/istream:38,
+                 from /usr/include/c++/9/sstream:38,
+                 from /usr/include/c++/9/complex:45,
+                 from /usr/include/c++/9/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:54,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/ios_base.h:83:3: note: candidate: ‘constexpr std::_Ios_Fmtflags std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)’
+   83 |   operator&(_Ios_Fmtflags __a, _Ios_Fmtflags __b)
+      |   ^~~~~~~~
+/usr/include/c++/9/bits/ios_base.h:83:27: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Fmtflags’
+   83 |   operator&(_Ios_Fmtflags __a, _Ios_Fmtflags __b)
+      |             ~~~~~~~~~~~~~~^~~
+/usr/include/c++/9/bits/ios_base.h:125:3: note: candidate: ‘constexpr std::_Ios_Openmode std::operator&(std::_Ios_Openmode, std::_Ios_Openmode)’
+  125 |   operator&(_Ios_Openmode __a, _Ios_Openmode __b)
+      |   ^~~~~~~~
+/usr/include/c++/9/bits/ios_base.h:125:27: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Openmode’
+  125 |   operator&(_Ios_Openmode __a, _Ios_Openmode __b)
+      |             ~~~~~~~~~~~~~~^~~
+/usr/include/c++/9/bits/ios_base.h:165:3: note: candidate: ‘constexpr std::_Ios_Iostate std::operator&(std::_Ios_Iostate, std::_Ios_Iostate)’
+  165 |   operator&(_Ios_Iostate __a, _Ios_Iostate __b)
+      |   ^~~~~~~~
+/usr/include/c++/9/bits/ios_base.h:165:26: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Iostate’
+  165 |   operator&(_Ios_Iostate __a, _Ios_Iostate __b)
+      |             ~~~~~~~~~~~~~^~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:66,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bitset:1433:5: note: candidate: ‘template<long unsigned int _Nb> std::bitset<_Nb> std::operator&(const std::bitset<_Nb>&, const std::bitset<_Nb>&)’
+ 1433 |     operator&(const bitset<_Nb>& __x, const bitset<_Nb>& __y) _GLIBCXX_NOEXCEPT
+      |     ^~~~~~~~
+/usr/include/c++/9/bitset:1433:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::bitset<_Nb>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:25:5: note: in expansion of macro ‘debugVL’
+   25 |     debugVL(22 & (1 << 3));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/bits/shared_ptr_atomic.h:33,
+                 from /usr/include/c++/9/memory:82,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:82,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/atomic_base.h:99:3: note: candidate: ‘constexpr std::memory_order std::operator&(std::memory_order, std::__memory_order_modifier)’
+   99 |   operator&(memory_order __m, __memory_order_modifier __mod)
+      |   ^~~~~~~~
+/usr/include/c++/9/bits/atomic_base.h:99:26: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::memory_order’
+   99 |   operator&(memory_order __m, __memory_order_modifier __mod)
+      |             ~~~~~~~~~~~~~^~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom1, class _Dom2> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Expr, std::_Expr, _Dom1, _Dom2>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::_Expr<_Dom2, typename _Dom2::value_type>&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:25:5: note: in expansion of macro ‘debugVL’
+   25 |     debugVL(22 & (1 << 3));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Expr, std::_Constant, _Dom, typename _Dom::value_type>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const typename _Dom::value_type&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:25:5: note: in expansion of macro ‘debugVL’
+   25 |     debugVL(22 & (1 << 3));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Constant, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const typename _Dom::value_type&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   mismatched types ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’ and ‘int’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:25:5: note: in expansion of macro ‘debugVL’
+   25 |     debugVL(22 & (1 << 3));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Expr, std::_ValArray, _Dom, typename _Dom::value_type>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::valarray<typename _Dom::value_type>&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:25:5: note: in expansion of macro ‘debugVL’
+   25 |     debugVL(22 & (1 << 3));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_ValArray, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const std::valarray<typename _Dom::value_type>&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   mismatched types ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’ and ‘int’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:25:5: note: in expansion of macro ‘debugVL’
+   25 |     debugVL(22 & (1 << 3));
+      |     ^~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/valarray:1191:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_ValArray, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__bitwise_and, _Tp>::result_type> std::operator&(const std::valarray<_Tp>&, const std::valarray<_Tp>&)’
+ 1191 | _DEFINE_BINARY_OPERATOR(&, __bitwise_and)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/valarray:1191:1: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::valarray<_Tp>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:25:5: note: in expansion of macro ‘debugVL’
+   25 |     debugVL(22 & (1 << 3));
+      |     ^~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/valarray:1191:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_ValArray, std::_Constant, _Tp, _Tp>, typename std::__fun<std::__bitwise_and, _Tp>::result_type> std::operator&(const std::valarray<_Tp>&, const typename std::valarray<_Tp>::value_type&)’
+ 1191 | _DEFINE_BINARY_OPERATOR(&, __bitwise_and)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/valarray:1191:1: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::valarray<_Tp>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:25:5: note: in expansion of macro ‘debugVL’
+   25 |     debugVL(22 & (1 << 3));
+      |     ^~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/valarray:1191:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Constant, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__bitwise_and, _Tp>::result_type> std::operator&(const typename std::valarray<_Tp>::value_type&, const std::valarray<_Tp>&)’
+ 1191 | _DEFINE_BINARY_OPERATOR(&, __bitwise_and)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/valarray:1191:1: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   mismatched types ‘const std::valarray<_Tp>’ and ‘int’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:25:5: note: in expansion of macro ‘debugVL’
+   25 |     debugVL(22 & (1 << 3));
+      |     ^~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:105,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/future:143:20: note: candidate: ‘constexpr std::launch std::operator&(std::launch, std::launch)’
+  143 |   constexpr launch operator&(launch __x, launch __y)
+      |                    ^~~~~~~~
+/usr/include/c++/9/future:143:37: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::launch’
+  143 |   constexpr launch operator&(launch __x, launch __y)
+      |                              ~~~~~~~^~~
+bitTest.cpp:26:16: error: no match for ‘operator&’ (operand types are ‘std::basic_ostream<char>’ and ‘int’)
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                 |
+      |                                                 std::basic_ostream<char>
+   11 |     #define debugWL(Z) std::cerr << #Z << '\n'
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   12 |     #define debugP() std::cerr << "Line:" << __LINE__ << '\n'
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   13 | #else
+      | ~~~~~           
+   14 |     #define debug(X)
+      |     ~~~~~~~~~~~~~~~~
+   15 |     #define debugV(X)
+      |     ~~~~~~~~~~~~~~~~~
+   16 |     #define debugVL(Y)
+      |     ~~~~~~~~~~~~~~~~~~
+   17 |     #define debugWL(Z)
+      |     ~~~~~~~~~~~~~~~~~~
+   18 |     #define debugP()
+      |     ~~~~~~~~~~~~~~~~
+   19 | #endif
+      | ~~~~~~          
+   20 | 
+      |                 
+   21 | int main() {
+      | ~~~~~~~~~~~~    
+   22 |     debugVL(22 & (1 << 0));
+      |     ~~~~~~~~~~~~~~~~~~~~~~~
+   23 |     debugVL(22 & (1 << 1));
+      |     ~~~~~~~~~~~~~~~~~~~~~~~
+   24 |     debugVL(22 & (1 << 2));
+      |     ~~~~~~~~~~~~~~~~~~~~~~~
+   25 |     debugVL(22 & (1 << 3));
+      |     ~~~~~~~~~~~~~~~~~~~~~~~
+   26 |     debugVL(22 & (1 << 4));
+      |     ~~~~~~~~~~ ^
+bitTest.cpp:10:52: note: in definition of macro ‘debugVL’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                    ^
+bitTest.cpp:26:16: note: candidate: ‘operator&(int, int)’ <built-in>
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+   26 |     debugVL(22 & (1 << 4));
+bitTest.cpp:10:52: note: in definition of macro ‘debugVL’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                    ^
+bitTest.cpp:26:16: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘int’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+......
+   26 |     debugVL(22 & (1 << 4));
+bitTest.cpp:10:52: note: in definition of macro ‘debugVL’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                    ^
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:45,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/cstddef:165:3: note: candidate: ‘constexpr std::byte std::operator&(std::byte, std::byte)’
+  165 |   operator&(byte __l, byte __r) noexcept
+      |   ^~~~~~~~
+/usr/include/c++/9/cstddef:165:18: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::byte’
+  165 |   operator&(byte __l, byte __r) noexcept
+      |             ~~~~~^~~
+In file included from /usr/include/c++/9/ios:42,
+                 from /usr/include/c++/9/istream:38,
+                 from /usr/include/c++/9/sstream:38,
+                 from /usr/include/c++/9/complex:45,
+                 from /usr/include/c++/9/ccomplex:39,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:54,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/ios_base.h:83:3: note: candidate: ‘constexpr std::_Ios_Fmtflags std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags)’
+   83 |   operator&(_Ios_Fmtflags __a, _Ios_Fmtflags __b)
+      |   ^~~~~~~~
+/usr/include/c++/9/bits/ios_base.h:83:27: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Fmtflags’
+   83 |   operator&(_Ios_Fmtflags __a, _Ios_Fmtflags __b)
+      |             ~~~~~~~~~~~~~~^~~
+/usr/include/c++/9/bits/ios_base.h:125:3: note: candidate: ‘constexpr std::_Ios_Openmode std::operator&(std::_Ios_Openmode, std::_Ios_Openmode)’
+  125 |   operator&(_Ios_Openmode __a, _Ios_Openmode __b)
+      |   ^~~~~~~~
+/usr/include/c++/9/bits/ios_base.h:125:27: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Openmode’
+  125 |   operator&(_Ios_Openmode __a, _Ios_Openmode __b)
+      |             ~~~~~~~~~~~~~~^~~
+/usr/include/c++/9/bits/ios_base.h:165:3: note: candidate: ‘constexpr std::_Ios_Iostate std::operator&(std::_Ios_Iostate, std::_Ios_Iostate)’
+  165 |   operator&(_Ios_Iostate __a, _Ios_Iostate __b)
+      |   ^~~~~~~~
+/usr/include/c++/9/bits/ios_base.h:165:26: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Iostate’
+  165 |   operator&(_Ios_Iostate __a, _Ios_Iostate __b)
+      |             ~~~~~~~~~~~~~^~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:66,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bitset:1433:5: note: candidate: ‘template<long unsigned int _Nb> std::bitset<_Nb> std::operator&(const std::bitset<_Nb>&, const std::bitset<_Nb>&)’
+ 1433 |     operator&(const bitset<_Nb>& __x, const bitset<_Nb>& __y) _GLIBCXX_NOEXCEPT
+      |     ^~~~~~~~
+/usr/include/c++/9/bitset:1433:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::bitset<_Nb>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:26:5: note: in expansion of macro ‘debugVL’
+   26 |     debugVL(22 & (1 << 4));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/bits/shared_ptr_atomic.h:33,
+                 from /usr/include/c++/9/memory:82,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:82,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/atomic_base.h:99:3: note: candidate: ‘constexpr std::memory_order std::operator&(std::memory_order, std::__memory_order_modifier)’
+   99 |   operator&(memory_order __m, __memory_order_modifier __mod)
+      |   ^~~~~~~~
+/usr/include/c++/9/bits/atomic_base.h:99:26: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::memory_order’
+   99 |   operator&(memory_order __m, __memory_order_modifier __mod)
+      |             ~~~~~~~~~~~~~^~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom1, class _Dom2> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Expr, std::_Expr, _Dom1, _Dom2>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::_Expr<_Dom2, typename _Dom2::value_type>&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:26:5: note: in expansion of macro ‘debugVL’
+   26 |     debugVL(22 & (1 << 4));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Expr, std::_Constant, _Dom, typename _Dom::value_type>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const typename _Dom::value_type&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:26:5: note: in expansion of macro ‘debugVL’
+   26 |     debugVL(22 & (1 << 4));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Constant, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const typename _Dom::value_type&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   mismatched types ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’ and ‘int’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:26:5: note: in expansion of macro ‘debugVL’
+   26 |     debugVL(22 & (1 << 4));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Expr, std::_ValArray, _Dom, typename _Dom::value_type>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::valarray<typename _Dom::value_type>&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:26:5: note: in expansion of macro ‘debugVL’
+   26 |     debugVL(22 & (1 << 4));
+      |     ^~~~~~~
+In file included from /usr/include/c++/9/valarray:603,
+                 from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/bits/valarray_after.h:411:5: note: candidate: ‘template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_ValArray, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__bitwise_and, typename _Dom1::value_type>::result_type> std::operator&(const std::valarray<typename _Dom::value_type>&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)’
+  411 |     _DEFINE_EXPR_BINARY_OPERATOR(&, __bitwise_and)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/bits/valarray_after.h:411:5: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   mismatched types ‘const std::_Expr<_Dom1, typename _Dom1::value_type>’ and ‘int’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:26:5: note: in expansion of macro ‘debugVL’
+   26 |     debugVL(22 & (1 << 4));
+      |     ^~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/valarray:1191:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_ValArray, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__bitwise_and, _Tp>::result_type> std::operator&(const std::valarray<_Tp>&, const std::valarray<_Tp>&)’
+ 1191 | _DEFINE_BINARY_OPERATOR(&, __bitwise_and)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/valarray:1191:1: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::valarray<_Tp>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:26:5: note: in expansion of macro ‘debugVL’
+   26 |     debugVL(22 & (1 << 4));
+      |     ^~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/valarray:1191:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_ValArray, std::_Constant, _Tp, _Tp>, typename std::__fun<std::__bitwise_and, _Tp>::result_type> std::operator&(const std::valarray<_Tp>&, const typename std::valarray<_Tp>::value_type&)’
+ 1191 | _DEFINE_BINARY_OPERATOR(&, __bitwise_and)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/valarray:1191:1: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   ‘std::basic_ostream<char>’ is not derived from ‘const std::valarray<_Tp>’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:26:5: note: in expansion of macro ‘debugVL’
+   26 |     debugVL(22 & (1 << 4));
+      |     ^~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:95,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/valarray:1191:1: note: candidate: ‘template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__bitwise_and, std::_Constant, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__bitwise_and, _Tp>::result_type> std::operator&(const typename std::valarray<_Tp>::value_type&, const std::valarray<_Tp>&)’
+ 1191 | _DEFINE_BINARY_OPERATOR(&, __bitwise_and)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/9/valarray:1191:1: note:   template argument deduction/substitution failed:
+bitTest.cpp:10:57: note:   mismatched types ‘const std::valarray<_Tp>’ and ‘int’
+   10 |     #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+      |                                                         ^~~~
+bitTest.cpp:26:5: note: in expansion of macro ‘debugVL’
+   26 |     debugVL(22 & (1 << 4));
+      |     ^~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h:105,
+                 from bitTest.cpp:1:
+/usr/include/c++/9/future:143:20: note: candidate: ‘constexpr std::launch std::operator&(std::launch, std::launch)’
+  143 |   constexpr launch operator&(launch __x, launch __y)
+      |                    ^~~~~~~~
+/usr/include/c++/9/future:143:37: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::launch’
+  143 |   constexpr launch operator&(launch __x, launch __y)
+      |                              ~~~~~~~^~~

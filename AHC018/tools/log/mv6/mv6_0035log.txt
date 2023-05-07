@@ -1,0 +1,6 @@
+    Finished release [optimized] target(s) in 0.03s
+     Running `target/release/tester ../mv6.out`
+water_step
+now_pos.y = 182, now_pos.x = 180
+dest_pos.y = 173, dest_pos.x = 10
+Total Cost = 192444

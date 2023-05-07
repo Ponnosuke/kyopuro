@@ -1,0 +1,33 @@
+# AtCoder Library
+Library/ac-library/
+
+# Python venv
+Python/.venv/
+
+# AHC018 tools
+AHC018/tools/Cargo.lock
+AHC018/tools/Cargo.toml
+AHC018/tools/README_en.html
+AHC018/tools/README_ja.html
+AHC018/tools/src/
+AHC018/tools/target/
+
+
+# AHC019 tools
+AHC019/tools/Cargo.lock
+AHC019/tools/Cargo.toml
+AHC019/tools/README_en.html
+AHC019/tools/README_ja.html
+AHC019/tools/src/
+AHC019/tools/target/
+AHC019/tools/in/
+
+# work
+work/
+
+# paiza
+paiza/
+
+
+# tmp
+problem.exe

@@ -1,0 +1,97 @@
+    Finished release [optimized] target(s) in 0.03s
+     Running `target/release/tester ../mv6.out`
+water_step
+now_pos.y = 183, now_pos.x = 194
+dest_pos.y = 195, dest_pos.x = 166
+house.at(dest_house_index).y = 92, house.at(dest_house_index).x = 182
+debug_dist = 42, from_cand_idx = 3
+house.at(from_cand_idx).y = 76, house.at(from_cand_idx).x = 156
+house.at(dest_house_index).y = 92, house.at(dest_house_index).x = 182
+debug_dist = 42, from_cand_idx = 3
+house.at(from_cand_idx).y = 76, house.at(from_cand_idx).x = 156
+house.at(dest_house_index).y = 92, house.at(dest_house_index).x = 182
+debug_dist = 61, from_cand_idx = 5
+house.at(from_cand_idx).y = 98, house.at(from_cand_idx).x = 127
+house.at(dest_house_index).y = 92, house.at(dest_house_index).x = 182
+debug_dist = 61, from_cand_idx = 5
+house.at(from_cand_idx).y = 98, house.at(from_cand_idx).x = 127
+house.at(dest_house_index).y = 92, house.at(dest_house_index).x = 182
+debug_dist = 80, from_cand_idx = 4
+house.at(from_cand_idx).y = 62, house.at(from_cand_idx).x = 132
+house.at(dest_house_index).y = 92, house.at(dest_house_index).x = 182
+debug_dist = 80, from_cand_idx = 4
+house.at(from_cand_idx).y = 62, house.at(from_cand_idx).x = 132
+house.at(dest_house_index).y = 92, house.at(dest_house_index).x = 182
+debug_dist = 103, from_cand_idx = 9
+house.at(from_cand_idx).y = 183, house.at(from_cand_idx).x = 194
+
+not_water_step
+now_pos.y = 183, now_pos.x = 194
+dest_pos.y = 92, dest_pos.x = 182
+house.at(dest_house_index).y = 76, house.at(dest_house_index).x = 156
+debug_dist = 38, from_cand_idx = 4
+house.at(from_cand_idx).y = 62, house.at(from_cand_idx).x = 132
+house.at(dest_house_index).y = 76, house.at(dest_house_index).x = 156
+debug_dist = 38, from_cand_idx = 4
+house.at(from_cand_idx).y = 62, house.at(from_cand_idx).x = 132
+house.at(dest_house_index).y = 76, house.at(dest_house_index).x = 156
+debug_dist = 42, from_cand_idx = 8
+house.at(from_cand_idx).y = 92, house.at(from_cand_idx).x = 182
+
+not_water_step
+now_pos.y = 92, now_pos.x = 182
+dest_pos.y = 76, dest_pos.x = 156
+house.at(dest_house_index).y = 62, house.at(dest_house_index).x = 132
+debug_dist = 38, from_cand_idx = 3
+house.at(from_cand_idx).y = 76, house.at(from_cand_idx).x = 156
+
+not_water_step
+now_pos.y = 76, now_pos.x = 156
+dest_pos.y = 62, dest_pos.x = 132
+house.at(dest_house_index).y = 98, house.at(dest_house_index).x = 127
+debug_dist = 41, from_cand_idx = 4
+house.at(from_cand_idx).y = 62, house.at(from_cand_idx).x = 132
+
+not_water_step
+now_pos.y = 62, now_pos.x = 132
+dest_pos.y = 98, dest_pos.x = 127
+house.at(dest_house_index).y = 64, house.at(dest_house_index).x = 45
+debug_dist = 42, from_cand_idx = -1
+
+water_step
+now_pos.y = 64, now_pos.x = 45
+dest_pos.y = 87, dest_pos.x = 26
+house.at(dest_house_index).y = 121, house.at(dest_house_index).x = 32
+debug_dist = 40, from_cand_idx = -1
+
+water_step
+now_pos.y = 121, now_pos.x = 32
+dest_pos.y = 87, dest_pos.x = 26
+house.at(dest_house_index).y = 169, house.at(dest_house_index).x = 58
+debug_dist = 74, from_cand_idx = 2
+house.at(from_cand_idx).y = 121, house.at(from_cand_idx).x = 32
+
+not_water_step
+now_pos.y = 121, now_pos.x = 32
+dest_pos.y = 169, dest_pos.x = 58
+house.at(dest_house_index).y = 5, house.at(dest_house_index).x = 81
+debug_dist = 86, from_cand_idx = 1
+house.at(from_cand_idx).y = 19, house.at(from_cand_idx).x = 9
+house.at(dest_house_index).y = 5, house.at(dest_house_index).x = 81
+debug_dist = 86, from_cand_idx = 1
+house.at(from_cand_idx).y = 19, house.at(from_cand_idx).x = 9
+house.at(dest_house_index).y = 5, house.at(dest_house_index).x = 81
+debug_dist = 95, from_cand_idx = 7
+house.at(from_cand_idx).y = 64, house.at(from_cand_idx).x = 45
+
+not_water_step
+now_pos.y = 64, now_pos.x = 45
+dest_pos.y = 5, dest_pos.x = 81
+house.at(dest_house_index).y = 19, house.at(dest_house_index).x = 9
+debug_dist = 81, from_cand_idx = 7
+house.at(from_cand_idx).y = 64, house.at(from_cand_idx).x = 45
+
+not_water_step
+now_pos.y = 64, now_pos.x = 45
+dest_pos.y = 19, dest_pos.x = 9
+Total Cost = 106512

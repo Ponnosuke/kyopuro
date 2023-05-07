@@ -1,0 +1,18 @@
+実行方法
+
+最後に改行を含めない in.txt ファイルを作成
+bf target_file.bf <in.txt で実行
+
+atcoder のテストケースだと最後に改行があるっぽくて、それを 読み込んだうえでその後に EOF が来るから
+それに気を付ける
+(ex)
+./ABC244 で
+
+bf test.bf <in.txt
+
+
+(ex)
+以下のコマンドをコンソールで実行すると良い
+
+bf src3_test.bf <in_test.txt
+cat in_test.txt

@@ -1,0 +1,52 @@
+    Finished release [optimized] target(s) in 0.03s
+     Running `target/release/tester ../mv6.out`
+water_step
+now_pos.y = 30, now_pos.x = 189
+dest_pos.y = 30, dest_pos.x = 16
+house.at(dest_house_index).y = 99, house.at(dest_house_index).x = 176
+debug_dist = 71, from_cand_idx = 3
+house.at(from_cand_idx).y = 70, house.at(from_cand_idx).x = 134
+house.at(dest_house_index).y = 99, house.at(dest_house_index).x = 176
+debug_dist = 71, from_cand_idx = 3
+house.at(from_cand_idx).y = 70, house.at(from_cand_idx).x = 134
+house.at(dest_house_index).y = 99, house.at(dest_house_index).x = 176
+debug_dist = 82, from_cand_idx = 5
+house.at(from_cand_idx).y = 30, house.at(from_cand_idx).x = 189
+
+not_water_step
+now_pos.y = 30, now_pos.x = 189
+dest_pos.y = 99, dest_pos.x = 176
+house.at(dest_house_index).y = 70, house.at(dest_house_index).x = 134
+debug_dist = 53, from_cand_idx = 2
+house.at(from_cand_idx).y = 64, house.at(from_cand_idx).x = 87
+house.at(dest_house_index).y = 70, house.at(dest_house_index).x = 134
+debug_dist = 53, from_cand_idx = 2
+house.at(from_cand_idx).y = 64, house.at(from_cand_idx).x = 87
+house.at(dest_house_index).y = 70, house.at(dest_house_index).x = 134
+debug_dist = 71, from_cand_idx = 0
+house.at(from_cand_idx).y = 99, house.at(from_cand_idx).x = 176
+
+not_water_step
+now_pos.y = 99, now_pos.x = 176
+dest_pos.y = 70, dest_pos.x = 134
+house.at(dest_house_index).y = 64, house.at(dest_house_index).x = 87
+debug_dist = 53, from_cand_idx = 3
+house.at(from_cand_idx).y = 70, house.at(from_cand_idx).x = 134
+
+not_water_step
+now_pos.y = 70, now_pos.x = 134
+dest_pos.y = 64, dest_pos.x = 87
+house.at(dest_house_index).y = 131, house.at(dest_house_index).x = 4
+debug_dist = 96, from_cand_idx = -1
+
+water_step
+now_pos.y = 131, now_pos.x = 4
+dest_pos.y = 116, dest_pos.x = 85
+house.at(dest_house_index).y = 186, house.at(dest_house_index).x = 47
+debug_dist = 98, from_cand_idx = 1
+house.at(from_cand_idx).y = 131, house.at(from_cand_idx).x = 4
+
+not_water_step
+now_pos.y = 131, now_pos.x = 4
+dest_pos.y = 186, dest_pos.x = 47
+Total Cost = 248352

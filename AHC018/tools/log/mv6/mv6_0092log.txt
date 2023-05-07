@@ -1,0 +1,64 @@
+    Finished release [optimized] target(s) in 0.03s
+     Running `target/release/tester ../mv6.out`
+water_step
+now_pos.y = 86, now_pos.x = 163
+dest_pos.y = 43, dest_pos.x = 138
+house.at(dest_house_index).y = 112, house.at(dest_house_index).x = 117
+debug_dist = 41, from_cand_idx = 6
+house.at(from_cand_idx).y = 147, house.at(from_cand_idx).x = 123
+house.at(dest_house_index).y = 112, house.at(dest_house_index).x = 117
+debug_dist = 41, from_cand_idx = 6
+house.at(from_cand_idx).y = 147, house.at(from_cand_idx).x = 123
+house.at(dest_house_index).y = 112, house.at(dest_house_index).x = 117
+debug_dist = 72, from_cand_idx = 7
+house.at(from_cand_idx).y = 86, house.at(from_cand_idx).x = 163
+
+not_water_step
+now_pos.y = 86, now_pos.x = 163
+dest_pos.y = 112, dest_pos.x = 117
+house.at(dest_house_index).y = 147, house.at(dest_house_index).x = 123
+debug_dist = 41, from_cand_idx = 3
+house.at(from_cand_idx).y = 112, house.at(from_cand_idx).x = 117
+
+not_water_step
+now_pos.y = 112, now_pos.x = 117
+dest_pos.y = 147, dest_pos.x = 123
+house.at(dest_house_index).y = 174, house.at(dest_house_index).x = 92
+debug_dist = 44, from_cand_idx = 2
+house.at(from_cand_idx).y = 189, house.at(from_cand_idx).x = 63
+house.at(dest_house_index).y = 174, house.at(dest_house_index).x = 92
+debug_dist = 44, from_cand_idx = 2
+house.at(from_cand_idx).y = 189, house.at(from_cand_idx).x = 63
+house.at(dest_house_index).y = 174, house.at(dest_house_index).x = 92
+debug_dist = 58, from_cand_idx = 6
+house.at(from_cand_idx).y = 147, house.at(from_cand_idx).x = 123
+
+not_water_step
+now_pos.y = 147, now_pos.x = 123
+dest_pos.y = 174, dest_pos.x = 92
+house.at(dest_house_index).y = 189, house.at(dest_house_index).x = 63
+debug_dist = 44, from_cand_idx = 4
+house.at(from_cand_idx).y = 174, house.at(from_cand_idx).x = 92
+
+not_water_step
+now_pos.y = 174, now_pos.x = 92
+dest_pos.y = 189, dest_pos.x = 63
+house.at(dest_house_index).y = 117, house.at(dest_house_index).x = 5
+debug_dist = 70, from_cand_idx = -1
+
+water_step
+now_pos.y = 117, now_pos.x = 5
+dest_pos.y = 92, dest_pos.x = 50
+house.at(dest_house_index).y = 57, house.at(dest_house_index).x = 43
+debug_dist = 40, from_cand_idx = -1
+
+water_step
+now_pos.y = 57, now_pos.x = 43
+dest_pos.y = 47, dest_pos.x = 73
+house.at(dest_house_index).y = 1, house.at(dest_house_index).x = 18
+debug_dist = 56, from_cand_idx = -1
+
+water_step
+now_pos.y = 1, now_pos.x = 18
+dest_pos.y = 22, dest_pos.x = 53
+Total Cost = 290404

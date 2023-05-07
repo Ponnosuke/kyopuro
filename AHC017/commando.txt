@@ -1,0 +1,10 @@
+g++ld -o getFumando.out getFumando.cpp
+cat ./getFumando_test1.txt | ./getFumando_ver1.out
+cat ./getFumando_test2.txt | ./getFumando_ver1.out
+
+
+#cases: 100
+Seed: 0, main_ver1.cpp  ->  getFumando_test1.txt
+  Visualizer: 10115801,  Local: 10129455  time: 12897 [ms]
+Seed: 0, main_ver10.cpp  ->  getFumando_test2.txt
+  Visualizer: 1159804304,  Local: 1159803909  time: 13090 [ms]

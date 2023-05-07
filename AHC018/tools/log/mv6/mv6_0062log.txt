@@ -1,0 +1,25 @@
+    Finished release [optimized] target(s) in 0.03s
+     Running `target/release/tester ../mv6.out`
+water_step
+now_pos.y = 198, now_pos.x = 26
+dest_pos.y = 168, dest_pos.x = 74
+house.at(dest_house_index).y = 114, house.at(dest_house_index).x = 101
+debug_dist = 81, from_cand_idx = -1
+
+water_step
+now_pos.y = 114, now_pos.x = 101
+dest_pos.y = 168, dest_pos.x = 74
+house.at(dest_house_index).y = 63, house.at(dest_house_index).x = 66
+debug_dist = 86, from_cand_idx = 0
+house.at(from_cand_idx).y = 114, house.at(from_cand_idx).x = 101
+
+not_water_step
+now_pos.y = 114, now_pos.x = 101
+dest_pos.y = 63, dest_pos.x = 66
+house.at(dest_house_index).y = 90, house.at(dest_house_index).x = 171
+debug_dist = 76, from_cand_idx = -1
+
+water_step
+now_pos.y = 90, now_pos.x = 171
+dest_pos.y = 152, dest_pos.x = 185
+Total Cost = 148944
