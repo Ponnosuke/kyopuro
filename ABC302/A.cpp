@@ -18,21 +18,11 @@ using ui64 = uint64_t;
     #define debugP()
 #endif
 
-void mySwap(int &x, int &y){
-    int tmp = x;
-    x = y;
-    y = tmp;
-
-    return;
-}
-
 int main() {
-    int x = 10, y = 20;
-    debugV(x);
-    debugVL(y);
+    i64 A, B;
+    cin >> A >> B;
 
-    debugWL(swap);
-    mySwap(x, y);
-    debugV(x);
-    debugVL(y);
+    i64 ans = (A + (B-1)) / B;
+
+    cout << ans << endl;
 }

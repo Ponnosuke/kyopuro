@@ -18,21 +18,5 @@ using ui64 = uint64_t;
     #define debugP()
 #endif
 
-void mySwap(int &x, int &y){
-    int tmp = x;
-    x = y;
-    y = tmp;
-
-    return;
-}
-
 int main() {
-    int x = 10, y = 20;
-    debugV(x);
-    debugVL(y);
-
-    debugWL(swap);
-    mySwap(x, y);
-    debugV(x);
-    debugVL(y);
 }
