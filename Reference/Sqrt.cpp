@@ -71,9 +71,6 @@ i64 ceilSqrt2(i64 n2, i64 upperBound){
         else{
             NG = mid;
         }
-
-        debugV(OK);
-        debugVL(NG);
     }
 
     return OK;
