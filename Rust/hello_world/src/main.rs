@@ -1,14 +1,7 @@
 use proconio::input;
 
 fn main() {
-    input!{
-        x: i32,
-    }
+    let tuple = (10_i32, 20_i64, 30_i128);
 
-    if x == 0 {
-        println!("1");
-    }
-    else{
-        println!("0");
-    }
+    println!("{:?}", tuple);
 }
