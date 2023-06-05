@@ -1,0 +1,46 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+using i64 = int64_t;
+using ui64 = uint64_t;
+
+#ifdef LOCAL_DEBUG
+    #define debug(X) std::cerr << X << " "
+    #define debugV(X) std::cerr << #X << " = " << X << ", "
+    #define debugVL(Y) std::cerr << #Y << " = " << Y << '\n'
+    #define debugWL(Z) std::cerr << #Z << '\n'
+    #define debugP() std::cerr << "Line:" << __LINE__ << '\n'
+#else
+    #define debug(X)
+    #define debugV(X)
+    #define debugVL(Y)
+    #define debugWL(Z)
+    #define debugP()
+#endif
+
+int main() {
+    int N, M;
+    cin >> N >> M;
+    map<int, int> mp;
+    for(int i = 0; i < N; i++){
+        int A;
+        cin >> A;
+        mp[A]++;
+    }
+    bool OK = true;
+    for(int i = 0; i < M; i++){
+        int B;
+        cin >> B;
+        if(!mp.count(B)){
+            OK = false;
+            break;
+        }
+        if(mp.at(B) == 0){
+            OK = false;
+            break;
+        }
+        mp.at(B)--;
+    }
+
+    cout << (OK ? "Yes" : "No") << endl;
+}

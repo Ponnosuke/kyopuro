@@ -1,7 +1,7 @@
-use proconio::input;
-
 fn main() {
-    let tuple = (10_i32, 20_i64, 30_i128);
-
-    println!("{:?}", tuple);
+    let mut array = [10, 20, 30];
+    for i in &mut array {
+        *i += 1;
+    }
+    assert_eq!(array, [11, 21, 31]);
 }
