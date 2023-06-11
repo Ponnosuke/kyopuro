@@ -22,6 +22,9 @@ AHC019/tools/src/
 AHC019/tools/target/
 AHC019/tools/in/
 
+# AHC020 tools
+AHC020/tools/
+
 # work
 work/
 
