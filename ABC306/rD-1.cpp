@@ -35,34 +35,21 @@ int main() {
     dp.at(0).at(0) = 0;
     for(int i = 0; i < N; i++){
         // 食べない
-        for(int j = 0; j < 2; j++){
-            dp.at(i+1).at(j) = max(dp.at(i+1).at(j), dp.at(i).at(j));
-        }
+        dp.at(i+1).at(0) = max(dp.at(i+1).at(0), dp.at(i).at(0));
+        dp.at(i+1).at(1) = max(dp.at(i+1).at(1), dp.at(i).at(1));
 
         // 食べる
-        for(int j = 0; j < 2; j++){
-            if(X.at(i) == 0){
-                if(j-1 >= 0){
-                    dp.at(i+1).at(j-1) = max(dp.at(i+1).at(j-1), dp.at(i).at(j) + Y.at(i));
-                }
-
-                dp.at(i+1).at(j) = max(dp.at(i+1).at(j), dp.at(i).at(j) + Y.at(i));
-                // この行が j=1 の時の更新でも問題ないのは、j=0 の方にも最大値が行っているから
-                // 次が解毒の時、j=0 から j=0 への更新でつじつまが合わせられる。
-                // 次が毒の時、j=1 からの更新無し
-            }
-            else{  // X == 1
-                if(j+1 < 2){
-                    dp.at(i+1).at(j+1) = max(dp.at(i+1).at(j+1), dp.at(i).at(j) + Y.at(i));
-                }
-            }
+        if(X.at(i) == 0){
+            dp.at(i+1).at(0) = max(dp.at(i+1).at(0), dp.at(i).at(1) + Y.at(i));
+            dp.at(i+1).at(0) = max(dp.at(i+1).at(0), dp.at(i).at(0) + Y.at(i));
+        }
+        else{
+            dp.at(i+1).at(1) = max(dp.at(i+1).at(1), dp.at(i).at(0) + Y.at(i));
         }
     }
 
     i64 ans = 0;
-    for(int i = 0; i < 2; i++){
-        ans = max(ans, dp.at(N).at(i));
-    }
+    ans = max(dp.at(N).at(0), dp.at(N).at(1));
 
     cout << ans << '\n';
 }
